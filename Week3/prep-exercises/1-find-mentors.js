@@ -25,12 +25,7 @@ console.log(possibleMentorsForModule('using-apis'));
  * It should return a single name.
  */
 const findMentorForModule = (moduleName) => {
-    const chosenMentors = mentors.reduce((acc, mentor) => {
-        if (mentor.canTeach.includes(moduleName)) {
-            acc.push(mentor.name)
-        }
-        return acc
-    }, [])
+    const chosenMentors = possibleMentorsForModule(moduleName)
 
     if (chosenMentors.length < 1) {
         return
