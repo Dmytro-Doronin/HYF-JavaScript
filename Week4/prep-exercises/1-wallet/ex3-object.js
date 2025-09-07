@@ -68,6 +68,9 @@ function main() {
     walletJack.transferInto(walletJoe, 50);
     walletJane.transferInto(walletJoe, 25);
 
+    walletJack.setDailyAllowance(80);
+    walletJack.resetDailyAllowance();
+
     walletJane.deposit(20);
     walletJane.transferInto(walletJoe, 25);
 
